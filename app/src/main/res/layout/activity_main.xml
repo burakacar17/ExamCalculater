@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#05AC0D"
+    android:backgroundTint="#B6D6C5"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="155dp"
+        android:layout_height="146dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/finalYuzde"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="Final Yüzdesi"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/finalNot"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="Final Notu"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="152dp"
+            android:layout_height="wrap_content"
+            android:background="#FF5722"
+            android:backgroundTint="#FF9800"
+            android:onClick="finalSave"
+            android:text="Final Kaydet" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="154dp"
+        android:layout_height="147dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/vizeYuzde"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="Vize Yüzdesi"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/vizeNot"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:ems="10"
+            android:hint="Vize Notu"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="#1320A8"
+            android:backgroundTint="#B58080"
+            android:onClick="vizeSave"
+            android:text="Vize Kaydet" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/finalKatkisi"
+        android:layout_width="146dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="39dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+    <TextView
+        android:id="@+id/vizeKatkisi"
+        android:layout_width="143dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="109dp"
+        android:background="#0CA9BC"
+        android:backgroundTint="#CDDC39"
+        android:onClick="ortalamaHesap"
+        android:text="Ortalama Hesapla"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/vizeKatkisi" />
+
+    <TextView
+        android:id="@+id/sonuc"
+        android:layout_width="172dp"
+        android:layout_height="44dp"
+        android:background="#39DCC9"
+        android:gravity="center"
+        android:textColorLink="#320303"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintVertical_bias="0.17" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
